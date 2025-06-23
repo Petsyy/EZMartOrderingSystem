@@ -135,6 +135,10 @@
             <form id="editForm">
                 <input type="hidden" id="editProductId">
                 <div class="form-group">
+                    <label for="editProductName">Name</label>
+                    <input type="text" id="editProductName" placeholder="Enter name" required>
+                </div>
+                <div class="form-group">
                     <label for="editPrice">Price</label>
                     <input type="number" id="editPrice" placeholder="Enter price" required>
                 </div>

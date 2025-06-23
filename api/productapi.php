@@ -100,9 +100,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Update Product
     if ($action === 'update') {
-        if (isset($data['id'], $data['price'], $data['stock'], $data['category'])) {
-            $stmt = $conn->prepare("UPDATE products SET price = ?, stock = ?, category = ? WHERE id = ?");
-            $stmt->bind_param("dssi", $data['price'], $data['stock'], $data['category'], $data['id']);
+        if (isset($data['name'],$data['id'], $data['price'], $data['stock'], $data['category'])) {
+            $stmt = $conn->prepare("UPDATE products SET name = ?, price = ?, stock = ?, category = ? WHERE id = ?");
+            $stmt->bind_param("sdssi",$data['name'], $data['price'], $data['stock'], $data['category'], $data['id']);
             echo json_encode(["success" => $stmt->execute()]);
             $stmt->close();
         } else {

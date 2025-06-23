@@ -67,6 +67,7 @@ $(document).ready(function () {
     if (!product) return;
 
     $("#editProductId").val(product.id);
+    $("#editProductName").val(product.name);
     $("#editPrice").val(product.price);
     $("#editStock").val(product.stock);
     $("#editCategory").val(product.category);
@@ -81,6 +82,7 @@ $(document).ready(function () {
     event.preventDefault();
 
     const productId = $("#editProductId").val();
+    const updatedName = $("#editProductName").val();
     const updatedPrice = parseFloat($("#editPrice").val());
     const updatedStock = parseInt($("#editStock").val());
     const updatedCategory = $("#editCategory").val();
@@ -92,6 +94,7 @@ $(document).ready(function () {
       data: JSON.stringify({
         action: "update",
         id: productId,
+        name: updatedName,
         price: updatedPrice,
         stock: updatedStock,
         category: updatedCategory,
