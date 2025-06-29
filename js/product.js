@@ -40,9 +40,9 @@ $(document).ready(function () {
                 <div class="product-container" data-id="${product.id}">
                     <img src="${imagePath}" alt="${product.name}">
                     <h3>${product.name}</h3>
-                    <p>Price: ₱${price}</p>
-                    <p>Stock: ${stock}</p>
-                    <p>Category: ${product.category}</p>
+                    <p><strong>Price:</strong> ₱${price}</p>
+                    <p><strong>Stock:</strong> ${stock}</p>
+                    <p><strong>Category:</strong> ${product.category}</p>
                     <button class="edit-btn" data-id="${product.id}">Edit</button>
                     <button class="delete-btn" data-id="${product.id}">Delete</button>
                 </div>
