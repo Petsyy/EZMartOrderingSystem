@@ -19,41 +19,41 @@
         </div>
     </header>
     
-            <!-- Sidebar -->
-        <div id="sidebar" class="sidebar">
-            <ul>
-                <li>
-                    <a href="../index" title="Home">
-                        <img src="../../assets/icons/home-icon.png" alt="Home" id="sidebar-icon" style="width: 27px; height: 27px;">
-                    </a>
-                </li>
-                <li>
-                    <a href="../modules/products/product" title="Products">
-                        <img src="../../assets/icons/product.png" alt="Products" id="sidebar-icon" style="width: 24px; height: 24px;">
-                    </a>
-                </li>
-                <li>
-                    <a href="../modules/orders/order" title="Orders">
-                        <img src="../../assets/icons/order.png" alt="Orders" id="sidebar-icon" style="width: 27px; height: 27px;">
-                    </a>
-                </li>
-                <li>
-                    <a href="../modules/customers/customer" title="Customers">
-                        <img src="../../assets/icons/customer.png" alt="Customer" id="sidebar-icon" style="width: 29px; height: 29px;">
-                    </a>
-                </li>
-                <li>
-                    <a href="../modules/admins/admin-accounts" title="User Accounts">
-                        <img src="../../assets/icons/user-settings.png" alt="User-Settings" id="sidebar-icon" style="width: 30px; height: 30px;">
-                    </a>
-                </li>
-                <li>
-                    <a href="../login/login.php" title="Log out">
-                        <img src="../../assets/icons/logout.png" alt="Log out" id="sidebar-icon" style="width: 26px; height: 26px;">
-                    </a>
-                </li>
-            </ul>
-        </div>
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+        <ul>
+            <li>
+                <a href="/EZMartOrderingSystem/index.php" title="Home">
+                    <img src="/EZMartOrderingSystem/assets/icons/home-icon.png" alt="Home" style="width: 27px; height: 27px;">
+                </a>
+            </li>
+            <li>
+                <a href="/EZMartOrderingSystem/modules/products/product.php" title="Products">
+                    <img src="/EZMartOrderingSystem/assets/icons/product.png" alt="Products" style="width: 24px; height: 24px;">
+                </a>
+            </li>
+            <li>
+                <a href="/EZMartOrderingSystem/modules/orders/order.php" title="Orders">
+                    <img src="/EZMartOrderingSystem/assets/icons/order.png" alt="Orders" style="width: 27px; height: 27px;">
+                </a>
+            </li>
+            <li>
+                <a href="/EZMartOrderingSystem/modules/customers/customer.php" title="Customers">
+                    <img src="/EZMartOrderingSystem/assets/icons/customer.png" alt="Customer" style="width: 29px; height: 29px;">
+                </a>
+            </li>
+            <li>
+                <a href="/EZMartOrderingSystem/modules/admins/admin-accounts.php" title="User Accounts">
+                    <img src="/EZMartOrderingSystem/assets/icons/user-settings.png" alt="User-Settings" style="width: 30px; height: 30px;">
+                </a>
+            </li>
+            <li>
+                <a href="/EZMartOrderingSystem/login/login.php" title="Log out">
+                    <img src="/EZMartOrderingSystem/assets/icons/logout.png" alt="Log out" style="width: 26px; height: 26px;">
+                </a>
+            </li>
+        </ul>
+    </div>
 
     
 <main class="container">
