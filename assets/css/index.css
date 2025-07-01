@@ -10,7 +10,8 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding-left: 80px; /* Account for sidebar */
+  padding-left: 80px;
+  /* Account for sidebar */
 }
 
 .header {
@@ -42,7 +43,8 @@ body {
 
 /* ===== Main Content ===== */
 .container {
-  margin-top: 70px; /* Account for fixed header */
+  margin-top: 70px;
+  /* Account for fixed header */
   padding: 30px;
 }
 
@@ -122,7 +124,7 @@ button:hover {
   padding: 20px;
   width: 80%;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 /* ===== Dashboard Grid ===== */
@@ -197,21 +199,22 @@ button:hover {
 }
 
 .recent-orders-table {
-    opacity: 0;
-    animation: fadeIn 0.8s ease-in-out forwards;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in-out forwards;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .recent-orders-table.delayed {
-    animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 
 /* ===== Counter Container ===== */
@@ -225,8 +228,8 @@ button:hover {
 }
 
 .counter-container.visible {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .counter-box {
@@ -242,8 +245,8 @@ button:hover {
 }
 
 .counter-box.visible {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .counter-box:hover {
@@ -278,6 +281,13 @@ button:hover {
   font-size: 24px;
   font-weight: bold;
   color: #0066FF;
+}
+
+#totalRevenue {
+  font-size: 20px;
+  font-weight: bold;
+  color: #28a745;
+  margin: 0;
 }
 
 /* Status Badges */
@@ -382,7 +392,7 @@ button:hover {
 
 .user-role-badge {
   font-size: 0.7rem;
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
   color: white;
   padding: 2px 8px;
   border-radius: 12px;

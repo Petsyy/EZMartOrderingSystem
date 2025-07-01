@@ -69,7 +69,15 @@ $validPages = [
 
         <!-- Counter Container -->
         <div class="counter-container">
-            <!-- Total Products Count -->
+            
+            <div class="counter-box">
+                <label>Total Revenue:</label>
+                <div class="counter-icon">
+                    <img src="./assets/icons/revenue-icon.png" alt="Revenue Icon">
+                    <p id="totalRevenue">Loading...</p>
+                </div>
+            </div>
+
             <div class="counter-box">
                 <label>Total Products:</label>
                 <div class="counter-icon">
@@ -93,14 +101,6 @@ $validPages = [
                 <div class="counter-icon">
                     <img src="./assets/icons/customer-icon-counter.png" alt="Customer Icon">
                     <span id="totalCustomerCount">0</span>
-                </div>
-            </div>
-
-            <div class="counter-box">
-                <label>Total Admins:</label>
-                <div class="counter-icon">
-                    <img src="./assets/icons/order-icon-counter.png" alt="Customer Icon">
-                    <span id="totalUserCount">0</span>
                 </div>
             </div>
         </div>
@@ -191,6 +191,7 @@ $validPages = [
     <script src="./js/user.js"></script>
     <script src="./js/notification.js"></script>
     <script src="./js/counter.js"></script>
+    <script src="./js/total_revenue.js"></script>
 
 </body>
 
