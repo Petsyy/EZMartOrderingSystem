@@ -69,13 +69,11 @@ $validPages = [
 
         <!-- Counter Container -->
         <div class="counter-container">
-            
+
             <div class="counter-box">
                 <label>Total Revenue:</label>
-                <div class="counter-icon">
-                    <img src="./assets/icons/revenue-icon.png" alt="Revenue Icon">
-                    <p id="totalRevenue">Loading...</p>
-                </div>
+                <img src="./assets/icons/revenue-icon.png" alt="Revenue Icon">
+                <p id="totalRevenue">Loading...</p>
             </div>
 
             <div class="counter-box">
