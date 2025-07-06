@@ -72,15 +72,17 @@ $validPages = [
 
             <div class="counter-box">
                 <label>Total Revenue:</label>
-                <img src="./assets/icons/revenue-icon.png" alt="Revenue Icon">
-                <p id="totalRevenue">Loading...</p>
+                <div class="revenue-container">
+                    <img src="./assets/icons/revenue-icon.png" alt="Revenue Icon">
+                    <p id="totalRevenue">0</p>
+                </div>
             </div>
 
             <div class="counter-box">
                 <label>Total Products:</label>
                 <div class="counter-icon">
                     <img src="./assets/icons/product-icon-counter.png" alt="Product Icon">
-                    <span id="totalProductCount">0</span>
+                    <p id="totalProductCount">0</p>
                 </div>
             </div>
 
@@ -89,7 +91,7 @@ $validPages = [
                 <label>Total Orders:</label>
                 <div class="counter-icon">
                     <img src="./assets/icons/order-icon.png" alt="Order Icon">
-                    <span id="totalOrderCount">0</span>
+                    <p id="totalOrderCount">0</p>
                 </div>
             </div>
 
@@ -98,7 +100,7 @@ $validPages = [
                 <label>Total Customers:</label>
                 <div class="counter-icon">
                     <img src="./assets/icons/customer-icon-counter.png" alt="Customer Icon">
-                    <span id="totalCustomerCount">0</span>
+                    <p id="totalCustomerCount">0</p>
                 </div>
             </div>
         </div>
