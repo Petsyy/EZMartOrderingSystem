@@ -26,7 +26,7 @@ It features a **web-based admin panel** that allows admin to manage and process 
 ---
 
 ## 📷 Preview
-
+!["Screenshot 2025-07-14 213142](https://github.com/user-attachments/assets/dcfbaa83-517f-48ce-9ebd-3e4457888951)
 ![Screenshot 2025-06-17 155713](https://github.com/user-attachments/assets/af57595e-a7dc-4365-9fa1-a2980c2ab09b)  
 ![Screenshot 2025-06-17 153230](https://github.com/user-attachments/assets/d91f2dfb-bac4-4a7b-bd98-91ca1435e792)  
 ![Screenshot 2025-06-17 155504](https://github.com/user-attachments/assets/66a33a19-559d-45fa-bfb0-98229bee99e5)  
