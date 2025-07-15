@@ -8,15 +8,16 @@ if (strpos($token, 'Error:') === 0) {
     echo "Access Token: " . $token;
 }
 
-function sendFCMNotification($deviceToken, $title, $body) {
-    $oauthToken = getOAuthToken(); 
-    
+function sendFCMNotification($deviceToken, $title, $body)
+{
+    $oauthToken = getOAuthToken();
+
     if (!$oauthToken) {
 
-        return false; 
+        return false;
     }
 
-    $url = "https://fcm.googleapis.com/v1/projects/ezmart-f178a/messages:send"; 
+    $url = "https://fcm.googleapis.com/v1/projects/ezmart-f178a/messages:send";
 
     $headers = [
         "Authorization: Bearer $oauthToken",
@@ -59,4 +60,3 @@ function sendFCMNotification($deviceToken, $title, $body) {
 
     return true;
 }
-?>

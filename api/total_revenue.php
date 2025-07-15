@@ -19,7 +19,6 @@ try {
         'success' => true,
         'totalRevenue' => number_format($totalRevenue, 2)
     ]);
-
 } catch (Exception $e) {
     http_response_code(500);
     echo json_encode([

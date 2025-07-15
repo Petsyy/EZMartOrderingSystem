@@ -100,9 +100,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Update Product
     if ($action === 'update') {
-        if (isset($data['name'],$data['id'], $data['price'], $data['stock'], $data['category'])) {
+        if (isset($data['name'], $data['id'], $data['price'], $data['stock'], $data['category'])) {
             $stmt = $conn->prepare("UPDATE products SET name = ?, price = ?, stock = ?, category = ? WHERE id = ?");
-            $stmt->bind_param("sdssi",$data['name'], $data['price'], $data['stock'], $data['category'], $data['id']);
+            $stmt->bind_param("sdssi", $data['name'], $data['price'], $data['stock'], $data['category'], $data['id']);
             echo json_encode(["success" => $stmt->execute()]);
             $stmt->close();
         } else {
@@ -152,4 +152,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 // Invalid request method
 http_response_code(400);
 echo json_encode(["success" => false, "error" => "Invalid request"]);
-?>

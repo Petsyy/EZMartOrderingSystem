@@ -30,21 +30,20 @@ try {
     // First, check if the admin exists
     $stmt = $conn->prepare("SELECT id FROM admins WHERE id = ?");
     $stmt->execute([$adminId]);
-    
+
     if (!$stmt->fetch()) {
         $response["error"] = "Admin not found";
         echo json_encode($response);
         exit();
     }
-    
+
     // Delete the admin
     $stmt = $conn->prepare("DELETE FROM admins WHERE id = ?");
     $stmt->execute([$adminId]);
-    
+
     $response["success"] = true;
 } catch (Exception $e) {
     $response["error"] = "Error deleting admin: " . $e->getMessage();
 }
 
 echo json_encode($response);
-?>

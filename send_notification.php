@@ -1,8 +1,9 @@
 <?php
-function sendPushNotification($fcmToken, $title, $body, $conn = null, $orderId = null) {
+function sendPushNotification($fcmToken, $title, $body, $conn = null, $orderId = null)
+{
     require_once "get_fcm_token.php";
     $accessToken = getOAuthToken();
-    
+
     if (strpos($accessToken, "Error") !== false) {
         return ["success" => false, "error" => $accessToken];
     }
@@ -42,8 +43,10 @@ function sendPushNotification($fcmToken, $title, $body, $conn = null, $orderId =
     curl_close($ch);
 
     // Handle invalid token
-    if ($httpCode === 404 && isset($responseData['error']['details'][0]['errorCode']) && 
-        $responseData['error']['details'][0]['errorCode'] === 'UNREGISTERED') {
+    if (
+        $httpCode === 404 && isset($responseData['error']['details'][0]['errorCode']) &&
+        $responseData['error']['details'][0]['errorCode'] === 'UNREGISTERED'
+    ) {
         return [
             "success" => false,
             "error" => "UNREGISTERED",
@@ -57,4 +60,3 @@ function sendPushNotification($fcmToken, $title, $body, $conn = null, $orderId =
         "response" => $responseData
     ];
 }
-?>

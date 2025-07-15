@@ -22,9 +22,9 @@ $adminId = $_GET['id'];
 try {
     $stmt = $conn->prepare("SELECT id, username, email, role, status, created_at FROM admins WHERE id = ?");
     $stmt->execute([$adminId]);
-    
+
     $admin = $stmt->fetch(PDO::FETCH_ASSOC);
-    
+
     if ($admin) {
         $response["admin"] = $admin;
         $response["success"] = true;
@@ -36,4 +36,3 @@ try {
 }
 
 echo json_encode($response);
-?>

@@ -39,4 +39,3 @@ curl_close($ch);
 
 echo "<h3>Response from FCM:</h3>";
 echo "<pre>$response</pre>";
-?>
