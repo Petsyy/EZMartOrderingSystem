@@ -129,10 +129,12 @@ h1 {
     color: var(--warning-color);
     font-weight: 600;
 }
+
 .status-completed {
     color: var(--success-color);
     font-weight: 600;
 }
+
 .status-cancelled {
     color: var(--danger-color);
     font-weight: 600;
@@ -142,6 +144,7 @@ h1 {
     color: #ff9800;
     font-weight: bold;
 }
+
 .ready-text {
     color: #4caf50;
     font-weight: bold;
@@ -155,7 +158,9 @@ h1 {
     gap: 8px;
 }
 
-.view-btn, .confirm-btn, .delete-btn {
+.view-btn,
+.confirm-btn,
+.delete-btn {
     padding: 8px 12px;
     border: none;
     border-radius: 6px;
@@ -213,7 +218,8 @@ h1 {
 
 .modal-content {
     background-color: white;
-    margin: 18% auto; /* This centers the modal vertically */
+    margin: 18% auto;
+    /* This centers the modal vertically */
     padding: 25px;
     border-radius: 10px;
     width: 450px;
@@ -229,6 +235,7 @@ h1 {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -269,7 +276,7 @@ h1 {
     .table-container {
         padding: 15px;
     }
-    
+
     .order-table {
         min-width: 600px;
     }
@@ -279,15 +286,15 @@ h1 {
     body {
         padding-left: 0;
     }
-    
+
     .header {
         left: 0;
     }
-    
+
     .container {
         padding: 20px 15px;
     }
-    
+
     .action-buttons {
         flex-direction: column;
     }
