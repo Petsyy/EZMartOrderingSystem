@@ -2,7 +2,7 @@
 require_once __DIR__ . '/../config/db_config.php';
 header("Content-Type: application/json");
 
-$server_url = "$server_url"; 
+$server_url = "$server_url";
 $paymongoApiUrl = "https://api.paymongo.com/v1/checkout_sessions";
 $paymongoApiKey = "sk_test_EbvCZMXi6ARpJuYgK4Z8ZgNh";
 
@@ -53,7 +53,7 @@ $requestData = [
             "line_items" => [
                 [
                     "currency" => "PHP",
-                    "amount" => $amountToPayCents, 
+                    "amount" => $amountToPayCents,
                     "name" => "HouseSmart Property",
                     "quantity" => 1
                 ]
@@ -135,4 +135,3 @@ if (isset($responseData['data']['attributes']['checkout_url'])) {
         'message' => 'Failed to create checkout session. Error: ' . $errorMessage
     ]);
 }
-?>
