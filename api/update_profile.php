@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $sql = "UPDATE users_mobile SET first_name=?, last_name=?, birthdate=?, contact=?, address=?, gender=? WHERE email=?";
-    
+
     try {
         $stmt = $conn->prepare($sql);
         $stmt->execute([$firstName, $lastName, $birthdate, $contact, $address, $gender, $email]);
@@ -43,4 +43,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 echo json_encode($response);
-?>
