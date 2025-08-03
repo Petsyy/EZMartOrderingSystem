@@ -65,7 +65,6 @@ switch ($action) {
         fetchPreviousOrders($conn);
         break;
 
-
     case "readyToPickup":
         readyToPickup($conn);
         break;
@@ -204,7 +203,6 @@ function fetchOrders($conn)
         echo json_encode(["error" => "Failed to fetch orders"]);
     }
 }
-
 
 // Confirm an order
 function confirmOrder($conn)
@@ -589,9 +587,7 @@ function readyToPickup($conn)
     }
 }
 
-
 // Fetch previous orders for a customer
-
 function fetchPreviousOrders($conn)
 {
     $customer_name = $_GET['customer_name'] ?? null;
