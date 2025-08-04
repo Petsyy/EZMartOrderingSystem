@@ -1,9 +1,11 @@
 <?php
 
 require __DIR__ . '../vendor/autoload.php';
+
 use Firebase\JWT\JWT;
 
-function getOAuthToken() {
+function getOAuthToken()
+{
     $serviceAccountPath = __DIR__ . "/service-account.json";
 
     if (!file_exists($serviceAccountPath)) {
@@ -73,5 +75,3 @@ function getOAuthToken() {
 }
 
 $token = getOAuthToken();
-
-?>

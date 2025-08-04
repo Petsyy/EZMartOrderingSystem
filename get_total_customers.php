@@ -5,7 +5,7 @@ require_once __DIR__ . '/config/db.php';
 header('Content-Type: application/json');
 
 try {
-    
+
     $checkColumnQuery = "SHOW COLUMNS FROM orders LIKE 'customer_id'";
     $checkStmt = $conn->prepare($checkColumnQuery);
     $checkStmt->execute();

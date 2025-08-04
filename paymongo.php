@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
     <script>
         function sendPaymentRequest(event) {
             event.preventDefault(); // Prevent form from reloading the page
-            
+
             let formData = {
                 customer_name: document.getElementById("customer_name").value.trim(),
                 user_id: document.getElementById("user_id").value.trim(),
@@ -29,32 +30,33 @@
 
             // Fetch API Request
             fetch("http://localhost/EZMartOrderingSystem/api/paymongo_status.php", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(formData)
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    alert("Redirecting to payment...");
-                    window.location.href = data.checkoutUrl; // Open checkout page
-                } else {
-                    alert("Error: " + data.message);
-                }
-            })
-            .catch(error => {
-                console.error("Error:", error);
-                alert("Payment request failed. Check the console for details.");
-            })
-            .finally(() => {
-                payButton.disabled = false;
-                payButton.innerText = "Pay Now";
-            });
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(formData)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert("Redirecting to payment...");
+                        window.location.href = data.checkoutUrl; // Open checkout page
+                    } else {
+                        alert("Error: " + data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    alert("Payment request failed. Check the console for details.");
+                })
+                .finally(() => {
+                    payButton.disabled = false;
+                    payButton.innerText = "Pay Now";
+                });
         }
     </script>
 </head>
+
 <body>
     <h2>PayMongo Payment</h2>
     <form onsubmit="sendPaymentRequest(event)">
@@ -82,4 +84,5 @@
         <button type="submit" id="pay_button">Pay Now</button>
     </form>
 </body>
+
 </html>
