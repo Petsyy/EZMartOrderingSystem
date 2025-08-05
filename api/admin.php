@@ -17,9 +17,7 @@ try {
 
     $response["admins"] = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $response["success"] = true;
-
 } catch (Exception $e) {
     $response["error"] = "Error loading admin data: " . $e->getMessage();
 }
 echo json_encode($response);
-?>
