@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Convert stored expiry to Manila time
             $stored_expiry = new DateTime($user['reset_expiry'], new DateTimeZone('UTC'));
             $stored_expiry->setTimezone(new DateTimeZone('Asia/Manila'));
-            
+
             $current_time = new DateTime("now", new DateTimeZone('Asia/Manila'));
 
             if ($stored_expiry > $current_time) {
@@ -61,16 +61,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Reset Password</title>
     <link rel="stylesheet" href="../assets/css/login.css">
     <style>
-        .error { color: red; margin-bottom: 15px; }
-        .success { color: green; margin-bottom: 15px; }
+        .error {
+            color: red;
+            margin-bottom: 15px;
+        }
+
+        .success {
+            color: green;
+            margin-bottom: 15px;
+        }
     </style>
 </head>
+
 <body>
     <div class="login-container">
         <fieldset>
@@ -99,4 +108,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </fieldset>
     </div>
 </body>
+
 </html>
