@@ -35,4 +35,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "✅ Password updated successfully!";
     echo "<br><a href='login.php'>Go back to login</a>";
 }
-?>

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forgot Password</title>
     <link rel="stylesheet" href="../assets/css/login.css">
 </head>
+
 <body>
     <div class="login-container">
         <fieldset>
@@ -31,4 +33,5 @@
         </fieldset>
     </div>
     <script src="forgot_pass.js"></script>
+
 </html>
