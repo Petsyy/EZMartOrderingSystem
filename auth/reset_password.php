@@ -65,7 +65,6 @@ try {
 
     $response['success'] = true;
     $response['message'] = "Password reset successfully";
-
 } catch (Exception $e) {
     $response['error'] = $e->getMessage();
     // Log the error securely
@@ -74,4 +73,3 @@ try {
 
 // Return JSON response
 echo json_encode($response);
-?>
