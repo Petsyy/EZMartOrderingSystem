@@ -35,7 +35,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 try {
-    // Fix: Removed the extra comma in SELECT query
+
     $stmt = $conn->prepare("SELECT id, first_name, last_name, email, password FROM users_mobile WHERE email = ?");
     $stmt->execute([$email]);
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -73,4 +73,3 @@ try {
     http_response_code(500);
     echo json_encode(['success' => false, 'message' => 'Database error. Please try again later.']);
 }
-?>
