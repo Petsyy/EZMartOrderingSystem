@@ -1,4 +1,5 @@
 <?php
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -55,7 +56,7 @@ try {
     $mail->addAddress($email);
     $mail->isHTML(true);
     $mail->Subject = "Your EZ Mart Password Reset OTP";
-    
+
     $mail->Body = "
         <div style='font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;'>
             <h2 style='color: #2563eb;'>EZ Mart Password Reset</h2>
@@ -69,7 +70,7 @@ try {
             <p>This OTP is valid for 15 minutes. If you didn't request this, please ignore this email.</p>
         </div>
     ";
-    
+
     $mail->AltBody = "EZ Mart Password Reset\n\nYour OTP is: $otp\n\nValid for 15 minutes.";
 
     $mail->send();
@@ -78,4 +79,3 @@ try {
     error_log("Email sending failed: " . $e->getMessage());
     echo json_encode(["success" => false, "error" => "Failed to send OTP"]);
 }
-?>
