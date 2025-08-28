@@ -47,7 +47,7 @@ try {
         echo json_encode(value: ['success' => false, 'message' => 'Email already exists.']);
         exit;
     }
-    
+
     $hashedPassword = password_hash(password: $password, algo: PASSWORD_BCRYPT);
 
     $stmt = $conn->prepare(query: "
@@ -63,4 +63,3 @@ try {
     http_response_code(response_code: 500);
     echo json_encode(value: ['success' => false, 'message' => 'Registration failed. Please try again.']);
 }
-
