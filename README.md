@@ -19,8 +19,7 @@ It features a **web-based admin panel** that allows admin to manage and process 
 
 - ✅ View and manage incoming orders in real time  
 - ✅ Update order statuses (e.g., Pending, Processing, Completed)  
-- ✅ Manage product inventory and details  
-- ✅ Access sales and order reports/analytics  
+- ✅ Manage product inventory and details
 - ✅ Secure admin authentication  
 
 ---
