@@ -84,8 +84,6 @@
         </ul>
     </div>
 
-
-
     <!-- Modals -->
     <div id="addProductModal" class="modal">
         <div class="modal-content">
