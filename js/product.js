@@ -87,6 +87,16 @@ $(document).ready(function () {
     const updatedStock = parseInt($("#editStock").val());
     const updatedCategory = $("#editCategory").val();
 
+    // Show loading while saving
+    Swal.fire({
+      title: "Updating...",
+      text: "Please wait while the product is being updated",
+      allowOutsideClick: false,
+      didOpen: () => {
+        Swal.showLoading();
+      },
+    });
+
     $.ajax({
       url: "../../api/productapi.php",
       method: "POST",
@@ -100,13 +110,13 @@ $(document).ready(function () {
         category: updatedCategory,
       }),
       success: function () {
-        alert("Product updated successfully!");
+        Swal.fire("Updated!", "Product updated successfully!", "success");
         $("#editModal").fadeOut();
         fetchProducts();
       },
       error: function (xhr) {
         console.error("Error updating product:", xhr.responseText);
-        alert("Failed to update product.");
+        Swal.fire("Error!", "Failed to update product.", "error");
       },
     });
   });
@@ -126,17 +136,22 @@ $(document).ready(function () {
       cancelButtonText: "Cancel",
     }).then((result) => {
       if (result.isConfirmed) {
+        // Show loading while deleting
+        Swal.fire({
+          title: "Deleting...",
+          text: "Please wait",
+          allowOutsideClick: false,
+          didOpen: () => {
+            Swal.showLoading();
+          },
+        });
+
         $.ajax({
           url: `../../api/productapi.php?id=${productId}`,
           method: "DELETE",
           success: function (response) {
-            console.log("Delete response:", response);
             if (response.success) {
-              Swal.fire(
-                "Deleted!",
-                "The product has been deleted successfully.",
-                "success"
-              );
+              Swal.fire("Deleted!", "The product has been deleted.", "success");
               fetchProducts();
             } else {
               Swal.fire(
@@ -147,7 +162,6 @@ $(document).ready(function () {
             }
           },
           error: function (xhr) {
-            console.error("Error deleting product:", xhr.responseText);
             Swal.fire(
               "Error!",
               "Failed to delete product. Please try again.",
