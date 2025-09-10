@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../../assets/css/product.css">
     <link rel="stylesheet" href="../../assets/css/sidebar.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -165,6 +166,7 @@
             </form>
         </div>
     </div>
+
 
     <!-- Include product-specific JS -->
     <script src="../../js/product.js"></script>

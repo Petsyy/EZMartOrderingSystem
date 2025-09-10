@@ -115,24 +115,47 @@ $(document).ready(function () {
   $("#productList").on("click", ".delete-btn", function () {
     const productId = $(this).data("id");
 
-    if (!confirm("Are you sure you want to delete this product?")) return;
-
-    $.ajax({
-      url: `../../api/productapi.php?id=${productId}`,
-      method: "DELETE",
-      success: function (response) {
-        console.log("Delete response:", response);
-        if (response.success) {
-          alert("Product deleted successfully!");
-          fetchProducts();
-        } else {
-          alert("Error: " + (response.error || "Failed to delete product."));
-        }
-      },
-      error: function (xhr) {
-        console.error("Error deleting product:", xhr.responseText);
-        alert("Failed to delete product. Please try again.");
-      },
+    Swal.fire({
+      title: "Are you sure?",
+      text: "Do you really want to delete this product?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#d33",
+      cancelButtonColor: "#3085d6",
+      confirmButtonText: "Yes, delete it!",
+      cancelButtonText: "Cancel",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        $.ajax({
+          url: `../../api/productapi.php?id=${productId}`,
+          method: "DELETE",
+          success: function (response) {
+            console.log("Delete response:", response);
+            if (response.success) {
+              Swal.fire(
+                "Deleted!",
+                "The product has been deleted successfully.",
+                "success"
+              );
+              fetchProducts();
+            } else {
+              Swal.fire(
+                "Error!",
+                response.error || "Failed to delete product.",
+                "error"
+              );
+            }
+          },
+          error: function (xhr) {
+            console.error("Error deleting product:", xhr.responseText);
+            Swal.fire(
+              "Error!",
+              "Failed to delete product. Please try again.",
+              "error"
+            );
+          },
+        });
+      }
     });
   });
 
