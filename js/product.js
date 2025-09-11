@@ -74,10 +74,8 @@ $(document).ready(function () {
     $("#editModal").fadeIn();
   });
 
-  // Close Edit Product Modal
   $("#closeModal").click(() => $("#editModal").fadeOut());
 
-  // Handle Edit Product Form Submit
   $("#editForm").submit(function (event) {
     event.preventDefault();
 
@@ -87,7 +85,6 @@ $(document).ready(function () {
     const updatedStock = parseInt($("#editStock").val());
     const updatedCategory = $("#editCategory").val();
 
-    // Show loading while saving
     Swal.fire({
       title: "Updating...",
       text: "Please wait while the product is being updated",
@@ -136,7 +133,6 @@ $(document).ready(function () {
       cancelButtonText: "Cancel",
     }).then((result) => {
       if (result.isConfirmed) {
-        // Show loading while deleting
         Swal.fire({
           title: "Deleting...",
           text: "Please wait",
@@ -214,6 +210,5 @@ $(document).ready(function () {
     $("#addProductModal").fadeOut();
   });
 
-  // Initial fetch of products
   fetchProducts();
 });
