@@ -200,12 +200,10 @@ $(document).ready(function () {
     });
   });
 
-  // Show Add Product Modal
   $("#addProductBtn").click(function () {
     $("#addProductModal").fadeIn();
   });
 
-  // Close Add Product Modal
   $("#closeAddProductModal").click(function () {
     $("#addProductModal").fadeOut();
   });
