@@ -18,6 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch((error) => {
       console.error("Error fetching revenue:", error);
       revenueElement.innerText = "₱0.00";
-      revenueElement.style.color = "#999"; // Visual indicator of error
+      revenueElement.style.color = "#999"; 
     });
 });
